@@ -1,0 +1,237 @@
+.detail__container {
+    width: 100vw;
+    background: fixed url('https://img.freepik.com/foto-gratis/bolsa-hilo-verduras-frutas-sobre-fondo-bicolor_185193-84598.jpg?w=740&t=st=1663982540~exp=1663983140~hmac=8e0b45eddf7e9097dffc6cb10edb00f691790f4cd88c869eab5a1ab8b8599919') no-repeat right;
+    background-size: contain;
+    color: aliceblue;
+    text-shadow: var(--text-shadow);
+    overflow: hidden;
+}
+
+.detail__content {
+    width: 65%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(6, 4, 3, 0.633);
+}
+
+.detail__content-diet {
+    text-transform: capitalize;
+    width: fit-content;
+    margin: 0 auto;
+    padding: .3rem;
+    text-shadow: var(--text-shadow);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    background-color: var(--color-bg);
+    color: var(--color-white);
+}
+
+.detail__content-link {
+    display: block;
+    margin: 0 auto;
+}
+
+.detail__content-link>button {
+    font-size: 1.7rem;
+}
+
+.detail__content-title {
+    text-align: center;
+    font-size: var(--font-size-h2);
+    padding: .5rem;
+}
+
+.detail__container .detail__content-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 55%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    transition: all 1s;
+}
+
+.detail__content-image:hover {
+    scale: 1.1;
+    box-shadow: 0 0 7px 0 #fff;
+}
+
+.detail__content-summary {
+    font-size: var(--font-size-p);
+    line-height: 1.5rem;
+}
+
+.detail__content-summary>a {
+    color: var(--color-bg-contrast);
+    background-color: var(--color-bg);
+    text-shadow: var(--text-shadow);
+}
+
+.detail__content-steps {
+    display: flex;
+    width: 100%;
+    gap: 10rem;
+    margin-bottom: 4rem;
+}
+
+.detail__content-steps>ul,
+.detail__content-steps>p {
+    font-size: var(--font-size-p);
+    width: 50%;
+}
+
+.detail__content-steps>p>span {
+    color: var(--color-bg-contrast);
+    font-size: var(--font-size-h3);
+    background-color: var(--color-bg-variant);
+    text-shadow: var(--text-shadow);
+}
+
+.detail__content-steps>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail__content-steps>ul>li {
+    text-transform: capitalize;
+}
+
+.detail__content-steps>ul>h4 {
+    color: var(--color-bg-contrast);
+    background-color: var(--color-bg-variant);
+    font-size: var(--font-size-h3);
+    margin: 0 0 .5rem 0;
+}
+
+.detail__spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+/* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
+
+@media screen and (max-width: 1028px) {
+    .detail__container {
+        background: none;
+    }
+
+    .detail__content {
+        width: 85%;
+    }
+
+    .detail__content-link>button {
+        font-size: 1.5rem;
+    }
+
+    .detail__content-title {
+        font-size: var(--font-size-h2-md);
+    }
+
+    .detail__container .detail__content-image {
+        max-width: 85%;
+    }
+
+    .detail__content-image:hover {
+        scale: 1.2;
+    }
+
+    .detail__content-summary {
+        font-size: var(--font-size-p-md);
+        padding: 0 1rem 0 1rem;
+    }
+
+    .detail__content-steps {
+        gap: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .detail__content-steps>p>span {
+        font-size: var(--font-size-h3-md);
+    }
+
+    .detail__content-steps>ul>h4 {
+        font-size: var(--font-size-h3-md);
+    }
+}
+
+
+/* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
+
+@media screen and (max-width: 750px) {
+
+    .detail__content {
+        width: auto;
+    }
+
+    .detail__content-link>button {
+        font-size: 1.5rem;
+    }
+
+
+    .detail__content-title {
+        font-size: var(--font-size-h2-sm);
+    }
+
+    .detail__content-image {
+        width: 100%;
+    }
+
+    .detail__content-image:hover {
+        scale: 1;
+    }
+
+    .detail__content-summary {
+        font-size: var(--font-size-p-sm);
+    }
+
+    .detail__content-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+
+    }
+
+    .detail__content-steps>ul,
+    .detail__content-steps>p {
+        font-size: var(--font-size-p-sm);
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .detail__content-steps>p {
+        line-height: 1.2rem;
+    }
+
+    .detail__content-steps>ul {
+        align-items: stretch;
+        gap: .5rem;
+    }
+
+    .detail__content-steps>p>span {
+        font-size: var(--font-size-h3-sm);
+    }
+
+    .detail__content-steps>ul>h4 {
+        font-size: var(--font-size-h3-sm);
+        width: fit-content;
+    }
+
+    .detail__content-stepscontainer {
+        margin: 0;
+        padding: 0;
+    }
+
+    .detail__spinner {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+    }
+}

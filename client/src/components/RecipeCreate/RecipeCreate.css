@@ -1,0 +1,258 @@
+ .create__container {
+     background: fixed url(../../assets/image/old-spoon-on-dark-table.jpg) 85%;
+     background-size: cover;
+     height: 100vh;
+     padding: 1rem;
+     overflow: hidden;
+ }
+
+ .create__title {
+     color: aliceblue;
+     text-align: center;
+     margin: .8rem;
+     font-size: var(--font-size-h2);
+     text-shadow: var(--text-shadow);
+ }
+
+ .create__button {
+     display: block;
+     margin: 0 auto;
+     padding: .5rem;
+     border: 1px solid transparent;
+     border-radius: 7px;
+     cursor: pointer;
+ }
+
+ .form__steps-button {
+     border: 1px solid transparent;
+     border-radius: 7px;
+     box-shadow: var(--box-shadow);
+     background-color: var(--color-bg);
+     color: aliceblue;
+     cursor: pointer;
+     padding: .2rem;
+ }
+
+ .form__steps-button:hover {
+     text-shadow: var(--text-shadow);
+ }
+
+ .create__button-back:hover {
+     border: 1px solid black;
+     background-color: rgba(255, 255, 255, 0.2);
+     color: var(--color-white);
+     text-shadow: var(--text-shadow);
+ }
+
+ /* /-----------------------------create denied--------------------------/ */
+
+ .create__container-denied {
+     width: 100vw;
+     height: 100vh;
+     overflow: hidden;
+     background: url(../../assets/image/Set_of_smiling_cute_chef_in_different_postures_cartoon_illustration_Premium_Vector.jpg) no-repeat bottom;
+     background-size: contain;
+     padding-top: 2rem;
+ }
+
+ .create__denied {
+     color: crimson;
+     position: relative;
+     text-align: center;
+     font-size: var(--font-size-h2);
+ }
+
+ /************************** Form Component ******************************/
+
+
+ .form__container {
+     display: flex;
+     flex-direction: column;
+     align-items: stretch;
+     gap: 1rem;
+     width: 45%;
+     padding: 2rem;
+     border-radius: 20px;
+     box-shadow: var(--box-shadow);
+     background-color: rgba(115, 106, 106, 0.574);
+     color: aliceblue;
+     margin: 0 auto;
+ }
+
+ .form__container>label>input {
+     width: 100%;
+     border-radius: 10px;
+     border: 1px solid transparent;
+     padding: .2rem;
+ }
+
+ .form__container>label>textarea {
+     border-radius: 10px;
+     border: 1px solid transparent;
+ }
+
+ .form__container>label {
+     font-weight: 600;
+ }
+
+ .form__container span {
+     color: crimson;
+     text-shadow: var(--text-shadow);
+     font-weight: 600;
+ }
+
+ .form__container .check__label {
+     font-size: .9rem;
+     font-weight: 200;
+     text-transform: capitalize;
+ }
+
+ .form__steps-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 25%;
+     font-weight: bolder;
+     text-shadow: var(--text-shadow);
+ }
+
+ .form__steps-list>li>ul {
+     font-weight: lighter;
+ }
+
+
+ .form__diet-types {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+     padding: .5rem;
+    }
+
+
+ .form__summary {
+     resize: none;
+     width: 100%;
+     margin: 0 auto;
+     display: block;
+     height: 74px;
+     border-radius: 10px;
+ }
+
+ .check__label {
+     display: flex;
+     position: relative;
+     padding-left: 35px;
+     margin-bottom: 12px;
+     cursor: pointer;
+     font-size: 22px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ }
+ 
+ .check__label input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+ }
+ 
+ .check {
+     position: absolute;
+     border-radius: 50%;
+     top: 0;
+     left: 0;
+     height: 25px;
+     width: 25px;
+     background-color: #eee;
+     border: 1px solid #ccc;
+    }
+    
+    .check__label:hover input~.check {
+        border: 2px solid var(--color-bg);
+    }
+    
+    .check__label input:checked~.check {
+        background-color: var(--color-bg);
+        border: none;
+    }
+    
+ .check:after {
+     content: "";
+     position: absolute;
+     display: none;
+ }
+
+ .check__label input:checked~.check:after {
+     display: block;
+ }
+
+ .check__label .check:after {
+     left: 9px;
+     top: 5px;
+     width: 5px;
+     height: 10px;
+     border: solid white;
+     border-width: 0 3px 3px 0;
+     -webkit-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     transform: rotate(45deg);
+ }
+
+
+ /* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
+
+ @media screen and (max-width: 1204px) {
+     .create__title {
+         font-size: var(--font-size-h2-md);
+     }
+
+     /* /-----------------------------create denied--------------------------/ */
+     .create__denied {
+         font-size: var(--font-size-h2-md);
+     }
+
+
+
+     /************************** Form Component ******************************/
+
+     .form__container {
+         gap: 1rem;
+         width: 65%;
+         padding: 1rem;
+     }
+
+ }
+
+ /* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
+
+ @media screen and (max-width: 600px) {
+
+     .create__container {
+         height: 120vh;
+     }
+
+     .create__title {
+         font-size: var(--font-size-h2-sm);
+     }
+
+
+     /* /-----------------------------create denied--------------------------/ */
+
+     .create__denied {
+         font-size: var(--font-size-h2-sm);
+     }
+
+
+     /************************** Form Component ******************************/
+
+
+     .form__container {
+         gap: 1rem;
+         width: 90%;
+     }
+
+     .form__diet-types {
+         gap: .5rem;
+         padding: 0;
+     }
+ }

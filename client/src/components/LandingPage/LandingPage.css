@@ -1,0 +1,156 @@
+.landing__container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 2rem;
+  background: fixed url('../../assets/image/frying-pan-empty-with-various-spices-in-black-table.jpg') center no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: var(--text-shadow);
+}
+
+.landing__container>h1 {
+  font-size: 3rem;
+  font-size: var(--font-size-h1);
+  margin: 0;
+}
+
+.landing__content {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 75vh;
+  gap: 10rem;
+}
+
+.landing__content-title {
+  font-size: var(--font-size-h2);
+}
+
+.landing__content-text {
+  width: 50%;
+}
+
+.landing__content-text .landing__text {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: var(--font-size-p);
+  line-height: 1.6rem;
+}
+
+
+.landing__content-button {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  box-shadow: 0 0 5px 0 white;
+  padding: .4rem;
+  cursor: pointer;
+}
+
+.landing__button {
+  position: relative;
+  left: 7.5rem;
+  top: 2.5rem;
+}
+
+.landing__content-button:hover {
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+}
+
+.landgin__profile-btn {
+  margin-left: 1rem;
+}
+
+/* ------------- MEDIA QUERIES (MEDIUM DEVICES) ------------- */
+
+@media screen and (max-width: 1024px) {
+
+
+  .landing__container>h1 {
+    font-size: var(--font-size-h1-md);
+  }
+
+  .landing__content-title {
+    font-size: var(--font-size-h2-md);
+  }
+
+  .landing__button {
+    left: 4.5rem;
+    top: 2rem;
+  }
+
+  .landing__content-button {
+    font-size: 1.4rem;
+  }
+
+  .landing__content-text .landing__text {
+    font-size: var(--font-size-p);
+    line-height: 1.7rem;
+    width: 130%;
+  }
+}
+
+/* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
+
+@media screen and (max-width: 600px) {
+
+  .landing__container>h1 {
+    font-size: var(--font-size-h1-sm);
+  }
+
+  .landing__content-title {
+    font-size: var(--font-size-h2-sm);
+  }
+
+  .landing__container {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 0rem;
+    background: fixed url('../../assets/image/frying-pan-empty-with-various-spices-in-black-table.jpg') 40% 29% no-repeat;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: var(--text-shadow);
+  }
+
+  .landing__content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .landing__content-text {
+    width: 100vw;
+    font-size: 1.2rem;
+    text-shadow: var(--text-shadow);
+  }
+
+  .landing__content-text>h2 {
+    position: relative;
+    left: 2rem;
+  }
+
+
+  .landing__content-text .landing__text {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    left: 2.2rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  .landing__button {
+    position: relative;
+    left: 3rem;
+    top: 2rem;
+  }
+
+
+}
