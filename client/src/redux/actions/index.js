@@ -18,7 +18,7 @@ import {
 export function getRecipes() {
   return (dispatch) => {
     axios
-      .get(`${axios.defaults.baseURL}/api/recipes`)
+      .get(`${axios.defaults.baseURL}/recipes`)
       .then((response) => {
         return dispatch({ type: GET_ALL_RECIPE, payload: response.data });
       })
@@ -31,7 +31,7 @@ export function getRecipes() {
 export function getDiets() {
   return (dispatch) => {
     axios
-      .get(`${axios.defaults.baseURL}/api/diets`)
+      .get(`${axios.defaults.baseURL}/diets`)
       .then((response) => {
         return dispatch({ type: GET_LIST_DIETS, payload: response.data });
       })
@@ -66,7 +66,7 @@ export function getRecipeByName(name) {
   return async function (dispatch) {
     try {
       let response = await axios.get(
-        `${axios.defaults.baseURL}/api/recipes?name=${name}`
+        `${axios.defaults.baseURL}/recipes?name=${name}`
       );
       return dispatch({
         type: GET_RECIPE_NAME,
@@ -85,7 +85,7 @@ export function getRecipeByName(name) {
 export function postRecipe(recipe) {
   return async function (dispatch) {
     const response = await axios.post(
-      `${axios.defaults.baseURL}/api/recipes`,
+      `${axios.defaults.baseURL}/recipes`,
       recipe
     );
     console.log(response);
@@ -96,7 +96,7 @@ export function postRecipe(recipe) {
 export function getDetail(id) {
   return async function (dispatch) {
     try {
-      let json = await axios.get(`${axios.defaults.baseURL}/api/recipes/${id}`);
+      let json = await axios.get(`${axios.defaults.baseURL}/recipes/${id}`);
       return dispatch({
         type: GET_RECIPE_DETAIL,
         payload: json.data,
@@ -126,7 +126,7 @@ export function deleteRecipe(id) {
   return async (dispatch) => {
     try {
       const response = await axios.delete(
-        `${axios.defaults.baseURL}/api/recipes/${id}`
+        `${axios.defaults.baseURL}/recipes/${id}`
       );
       dispatch({ type: DELETE_RECIPE, payload: response.data });
     } catch (error) {

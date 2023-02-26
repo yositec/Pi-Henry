@@ -1,5 +1,5 @@
 .home__container {
-    background: fixed url('../../assets/image/vintage-old-rustic-cutlery-on-dark.jpg') no-repeat;
+    background: fixed url('../../assets/image/homepage.jpg') no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -186,9 +186,9 @@
 .paginated__container {
     box-shadow: var(--box-shadow);
     display: flex;
-    gap: 2rem;
+    gap: 5rem;
     padding: .5rem;
-    background-color: var(--color-bg);
+    background-color: red;
     justify-content: center;
     margin-top: 1rem;
 }
