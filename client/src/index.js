@@ -16,6 +16,9 @@ import { Auth0Provider } from "@auth0/auth0-react";
 //axios.defaults.baseURL = "http://localhost:3001";
 axios.defaults.baseURL = "https://pi-henry-production-b8c4.up.railway.app";
 
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
 
 ReactDOM.render(
   <React.StrictMode>
