@@ -20,8 +20,8 @@ axios.defaults.baseURL = "https://pi-henry-production-b8c4.up.railway.app";
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-    domain= {process.env.REACT_APP_DOMAIN}
-    clientId={process.env.REACT_APP_CLIENT_ID}
+    domain= "dev-o258bcfpbouzrhk8.us.auth0.com"
+    clientId="GkEi3xMNmKQpfAOqJusDtkIhH5WiIxSe"
     authorizationParams={{
       redirect_uri: window.location.origin
     }}>
