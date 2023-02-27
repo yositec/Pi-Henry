@@ -48,5 +48,8 @@
     "fs": false,
     "os": false,
     "path": false
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1"
   }
 }
