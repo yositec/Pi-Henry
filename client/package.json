@@ -25,8 +25,8 @@
     "web-vitals": "^2.1 .4"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --openssl-legacy-provider",
+    "start": "react-scripts start - -openssl-legacy-provider",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -52,8 +52,5 @@
     "fs": false,
     "os": false,
     "path": false
-  },
-  "devDependencies": {
-    "dotenv-webpack": "^8.0.1"
   }
 }
