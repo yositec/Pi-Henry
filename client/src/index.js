@@ -13,7 +13,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
 
 dotenv.config();
 
-axios.defaults.baseURL = "http://localhost:3001";
+//axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://pi-henry-server-production.up.railway.app";
 
 //const domain = process.env.REACT_APP_DOMAIN;
 //const clientId = process.env.REACT_APP_CLIENT_ID;
