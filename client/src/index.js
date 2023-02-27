@@ -14,16 +14,14 @@ import { Auth0Provider } from "@auth0/auth0-react";
 dotenv.config();
 
 //axios.defaults.baseURL = "http://localhost:3001";
-axios.defaults.baseURL = "https://pi-henry-server-production.up.railway.app";
+axios.defaults.baseURL = "https://pi-henry-production-b8c4.up.railway.app";
 
-//const domain = process.env.REACT_APP_DOMAIN;
-//const clientId = process.env.REACT_APP_CLIENT_ID;
 
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-    domain="dev-o258bcfpbouzrhk8.us.auth0.com"
-    clientId="GkEi3xMNmKQpfAOqJusDtkIhH5WiIxSe"
+    domain= {process.env.REACT_APP_DOMAIN}
+    clientId={process.env.REACT_APP_CLIENT_ID}
     authorizationParams={{
       redirect_uri: window.location.origin
     }}>
